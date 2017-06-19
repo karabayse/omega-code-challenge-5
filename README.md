@@ -9,7 +9,7 @@ Your Front End should have two inputs:
 - [X] the other for the user's message.
 - [X] Additionally, there should be a submit button,
 
-- [] When the submit button is clicked, you must send the name and message from the
+- [X] When the submit button is clicked, you must send the name and message from the
 inputs to the server to be written to a Mongo Database
 
 - [] Once the message has been successfully written to the database,

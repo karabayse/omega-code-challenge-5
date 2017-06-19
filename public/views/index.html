@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/controllerApp.js" charset="utf-8"></script>
-    <script src="scripts/services/listingsService.js" charset="utf-8"></script>
+    <script src="scripts/services/messagesService.js" charset="utf-8"></script>
     <title>Omega Code Challenge #5: Angular and MongoDB</title>
   </head>
   <body ng-app="myApp">
@@ -15,12 +15,18 @@
     <h1>Message Board Application</h1>
     </div>
 
-    <div ng-controller="MessageBoardController as mbc" ng-init="mbc.getMessages()" class="container">
+    <div ng-controller="MessagesController as mc" ng-init="mc.getMessages()" class="container">
 
 
-      <input type="number" ng-model="mbc.nameIn" placeholder="cost">
-      <input type="number" ng-model="mbc.messageIn" placeholder="rent">
-      <button type="button" ng-click="mbc.newMessage()" name="button">Submit</button>
+      <input type="text" ng-model="mc.nameIn" placeholder="name">
+      <input type="text" ng-model="mc.messageIn" placeholder="message">
+      <button type="button" ng-click="mc.addMessage()" name="button">Submit</button>
+
+      <div class="col-sm-4" ng-repeat="messages in mc.returnedMessages">
+          {{ messages.name }}
+          {{ messages.message }}
+      </div>
+
 
     </div>
 

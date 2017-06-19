@@ -34,21 +34,13 @@ router.post('/', function(req, res) {
   // retrieved the req.body
   // putting it into an object to be saved in the db
   var messageToAdd = {
-    cost: req.body.name,
-    rent: req.body.message
+    name: req.body.name,
+    message: req.body.message
   };
 
   // create new listing
   var newMessage = messagesModel(messageToAdd);
   newMessage.save();
 });
-
-// delete listing
-// router.delete('/:id', function(req, res){
-//   console.log('req.body: ', req.body);
-//   listings.remove({_id:req.params.id}).then(function(){
-//     res.sendStatus(200);
-//   });
-// }); // end listing to delete
 
 module.exports = router;
