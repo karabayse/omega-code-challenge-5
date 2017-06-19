@@ -12,7 +12,7 @@ Your Front End should have two inputs:
 - [X] When the submit button is clicked, you must send the name and message from the
 inputs to the server to be written to a Mongo Database
 
-- [] Once the message has been successfully written to the database,
+- [X] Once the message has been successfully written to the database,
 display all messages on the DOM.
 
-- [] If the application page is reloaded, all previous messages should appear.
+- [X] If the application page is reloaded, all previous messages should appear.

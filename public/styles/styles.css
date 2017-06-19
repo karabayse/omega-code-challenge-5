@@ -1,3 +1,9 @@
+.jumbotron {
+  text-align: center;
+  font-family: Helvetica;
+}
+
 body {
-  background-color: blue;
+  background-color: Wheat;
+  font-family: Helvetica;
 }
